@@ -24,7 +24,8 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'http://localhost:8080/';
+    public $baseURL = 'http://localhost/9no_tetra/proyecto_idgs09/'; # url de gerson
+    // public $baseURL = ''; # url de David
 
     /**
      * --------------------------------------------------------------------------
