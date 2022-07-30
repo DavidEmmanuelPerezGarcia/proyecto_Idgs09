@@ -2,7 +2,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="footer-copy-right">
+                        <div class="footer-copy-right" style="    position: absolute; left: 50%; transform: translateX(-80%);">
                             <p>Copyright © 2018 <a href="https://colorlib.com/wp/templates/">Colorlib</a> All rights reserved.</p>
                         </div>
                     </div>
