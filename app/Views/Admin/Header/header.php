@@ -71,7 +71,8 @@
     </div>
     <div class="nalika-profile">
       <div class="profile-dtl">
-        <a href="#"><img src="img/notification/4.jpg" alt=""></a>
+        <!-- <a href="#"><img src="img/notification/4.jpg" alt=""></a> -->
+        <a href="#"><img src="<?php echo $_SESSION['profile_pic']?>" alt=""></a>
         <h2>Lakian <span class="min-dtn">Das</span></h2>
       </div>
       <div class="profile-social-dtl">
