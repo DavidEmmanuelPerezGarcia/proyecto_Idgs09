@@ -19,7 +19,7 @@
 /*----------------------------------------*/
 /*  1.  Theme default CSS
 /*----------------------------------------*/
-html, body {height: 100%; font-family: 'Roboto', sans-serif;font-weight:400;background:#152036;}
+html, body {height: 100%;    position: fixed;width: 100%; font-family: 'Roboto', sans-serif;font-weight:400;background:#152036;}
 .floatleft {float:left}
 .floatright {float:right}
 .alignleft {float:left;margin-right:15px;margin-bottom: 15px}
@@ -289,6 +289,9 @@ ul.dtl-social li a{
     background: #1b2a47;
     padding: 20px 0px;
     text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 .footer-copy-right p {
     margin: 0px;
@@ -807,7 +810,7 @@ ul.setting-panel-list li{
 .breadcome-list {
     padding:20px;
 	background:#1b2a47;
-	margin:30px 0px;
+	/* margin:30px 0px; */
 }
 .breadcome-heading .form-control, .breadcome-heading .form-control:focus {
     border: 1px solid #152036;

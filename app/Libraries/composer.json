@@ -1,0 +1,12 @@
+{
+    "name": "google/login",
+    "authors": [
+        {
+            "name": "Brayan Zaldivar",
+            "email": "10699@utl.edu.mx"
+        }
+    ],
+    "require": {
+        "google/apiclient": "2.7"
+    }
+}
