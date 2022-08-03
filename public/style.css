@@ -293,6 +293,12 @@ ul.dtl-social li a{
     bottom: 0;
     width: 100%;
 }
+@media (min-width: 992px) {
+    .footer-copyright-area {
+        left: 5%;
+    } 
+}
+
 .footer-copy-right p {
     margin: 0px;
     font-size: 15px;

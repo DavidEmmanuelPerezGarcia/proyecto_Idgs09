@@ -43,6 +43,11 @@ $routes->get('/google_login','LoginController::google_login');
 
 /* Routes Admin*/
 $routes->get('Admin','AdminController::index');
+$routes->get('Agregar_Archivos','AdminController::vistAddArchivoAdmin');
+$routes->get('departamentos','AdminController::vistaDepartamentosAdmin');
+$routes->get('Agregar_departamento','AdminController::vistaAddDepartamentos');
+$routes->get('usuarios','AdminController::LiestadoUsuarios');
+$routes->post('agregar_departamento','AdminController::agregar_departamento');
 
 /*
  * --------------------------------------------------------------------

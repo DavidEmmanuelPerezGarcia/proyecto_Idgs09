@@ -42,6 +42,19 @@ class LoginModel extends Model{
         $builder = $this->db->table('users')->select('*')->where('oauth_id',$id);
         return $builder->get()->getRowArray();
     } 
+
+
+    public function getAllTable($tabla){
+        $qry =$this->db->table($tabla);
+        $qry->select("*");
+        return $qry->get()->getResultArray();
+    }
+
+    public function insertGeneral($tabla,$data){
+        $qry = $this->db->table($tabla);
+        $qry->insert($data);
+        return "datos agregados";
+    }
 }
 
 
