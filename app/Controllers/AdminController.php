@@ -18,6 +18,47 @@ class AdminController extends BaseController
         return view('Admin/Inicio/inicio');
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
     public function vistAddArchivoAdmin(){
         return view('Admin/Inicio/addArchivos');
     }
@@ -54,5 +95,15 @@ class AdminController extends BaseController
         $departamento = $this->loginModel->insertGeneral("departamentos",$data);
 
         return redirect()->to(base_url('departamentos'));
+    }
+
+    public function inicio()
+    {
+        
+        return view('inicio/Inicio');
+    }
+    public function archivos()
+    {
+        return view('inicio/archivos/archivos');
     }
 }

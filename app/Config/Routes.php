@@ -49,6 +49,11 @@ $routes->get('Agregar_departamento','AdminController::vistaAddDepartamentos');
 $routes->get('usuarios','AdminController::LiestadoUsuarios');
 $routes->post('agregar_departamento','AdminController::agregar_departamento');
 
+/* Routes usuario comun*/
+$routes->get('inicio','AdminController::inicio');
+$routes->get('/archivos','AdminController::archivos');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
