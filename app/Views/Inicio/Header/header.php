@@ -94,7 +94,7 @@
                 <a class="" href="#" aria-expanded="false"><i class="icon nalika-mail icon-wrap"></i> <span
                     class="mini-click-non">Inicio</span></a>
                     <a class "" href="<?php echo base_url('/archivos') ?>"><i class="icon nalika-mail icon-wrap"></i> <span
-                    class="mini-click-non">Subir/eliminar archivos</span></a>
+                    class="mini-click-non">Archivos</span></a>
                     <a class "" href=""><i class="icon nalika-mail icon-wrap"></i> <span
                     class="mini-click-non">Cambiar contraseña</span></a>
                 <!-- <ul class="submenu-angle collapse" aria-expanded="false">
