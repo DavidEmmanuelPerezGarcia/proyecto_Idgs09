@@ -1,17 +1,7 @@
 
 
 <?php
-/*if(!isset($_SESSION["type_user"])){
-  echo 'console.log("no existe");';
-  echo 'hola';
-  header('Location: '.$nuevaURL.php);
-}else{
-  echo 'console.log("existe");';
-  echo 'hola';
-}*/
-
 if(isset($_SESSION["type_user"])){
-  
   if($_SESSION["type_user"] == 1){
     header('Location: '.base_url('Admin'));
     exit();
@@ -206,7 +196,7 @@ if(isset($_SESSION["type_user"])){
     }
 
     let open_url = (url) => {
-      // console.log(url);
+      console.log(url);
       const ventana = window.open(
         url,//"https://accounts.google.com/o/oauth2/auth/identifier?response_type=code&access_type=offline&client_id=221049452876-df668u4d2cojj0k890u48a9r3ro4pr56.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%2F9no_tetra%2Fproyecto_idgs09%2Fgoogle_login&state&scope=email%20profile%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ftasks%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ftasks.readonly&approval_prompt=force&flowName=GeneralOAuthFlow",
         "Google Login", "width=1000, height=900");
