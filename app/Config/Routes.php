@@ -48,6 +48,7 @@ $routes->get('departamentos','AdminController::vistaDepartamentosAdmin');
 $routes->get('Agregar_departamento','AdminController::vistaAddDepartamentos');
 $routes->get('usuarios','AdminController::LiestadoUsuarios');
 $routes->post('agregar_departamento','AdminController::agregar_departamento');
+$routes->post('agregar_archivo','AdminController::upload');
 
 /*
  * --------------------------------------------------------------------

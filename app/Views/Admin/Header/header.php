@@ -82,13 +82,13 @@ if(!isset($_SESSION["type_user"]) || $_SESSION["type_user"] != 1){
         <h2><?php echo $_SESSION['first_name']?></h2>
         <h2><?php echo $_SESSION['last_name']?></h2>
       </div>
-      <div class="profile-social-dtl">
+      <!-- <div class="profile-social-dtl">
         <ul class="dtl-social">
           <li><a href="#"><i class="icon nalika-facebook"></i></a></li>
           <li><a href="#"><i class="icon nalika-twitter"></i></a></li>
           <li><a href="#"><i class="icon nalika-linkedin"></i></a></li>
         </ul>
-      </div>
+      </div> -->
     </div>
     <div class="left-custom-menu-adp-wrap comment-scrollbar mCustomScrollbar _mCS_1 mCS-autoHide"
       style="position: relative; overflow: visible;">
