@@ -14,4 +14,13 @@ class AdminController extends BaseController
         
         return view('Admin/Inicio/inicio');
     }
+    public function inicio()
+    {
+        
+        return view('inicio/Inicio');
+    }
+    public function archivos()
+    {
+        return view('inicio/archivos/archivos');
+    }
 }

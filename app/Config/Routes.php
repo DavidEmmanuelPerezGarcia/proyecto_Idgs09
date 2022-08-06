@@ -44,6 +44,11 @@ $routes->get('/google_login','LoginController::google_login');
 /* Routes Admin*/
 $routes->get('Admin','AdminController::index');
 
+/* Routes usuario comun*/
+$routes->get('inicio','AdminController::inicio');
+$routes->get('/archivos','AdminController::archivos');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
