@@ -14,8 +14,21 @@ class AdminController extends BaseController
 
     public function index()
     {
+        $data = [];
+        $archivos = $this->loginModel->getAllTable("archivos");
+        $i = 0;
+        foreach($archivos as $a){
+            $condicion = [
+                'id' => $a["id_user"] 
+            ];
+
+            $name_user = $this->loginModel->getAllRow("users",$condicion);
+            $archivos[$i]["usuario"] = $name_user["first_name"]." ".$name_user["last_name"];
+            $i++;  
+        }
+        $data["archivos"] = $archivos;
         
-        return view('Admin/Inicio/inicio');
+        return view('Admin/Inicio/inicio',$data);
     }
 
 
