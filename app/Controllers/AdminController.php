@@ -18,6 +18,7 @@ class AdminController extends BaseController
         return view('Admin/Inicio/inicio');
     }
 
+
     public function vistAddArchivoAdmin(){
         return view('Admin/Inicio/addArchivos');
     }
@@ -56,7 +57,6 @@ class AdminController extends BaseController
         return redirect()->to(base_url('departamentos'));
     }
 
-
     public function upload(){
         $validationRule = [
             'userfile' => [
@@ -74,12 +74,6 @@ class AdminController extends BaseController
         if (! $img->hasMoved()) {
             $filepath = WRITEPATH . 'uploads/archivos/'.$img->store();
 
-            echo '<pre>';
-            echo print_r($img);
-            echo '</pre>';
-
-            echo $filepath;
-
             $data = [
                 'nombre' => $_POST["nombre_archivo"],
                 'id_user' => $_SESSION["id"],
@@ -89,14 +83,20 @@ class AdminController extends BaseController
             $addArchivo = $this->loginModel->insertGeneral("archivos", $data);
 
             return redirect()->to(base_url('Admin'));
-
-            // $data = ['uploaded_flleinfo' => new File($filepath)];
-
-            // return view('upload_success', $data);
         }
 
 
-        // return view('upload_form', $data);
     }
 
+    public function inicio()
+    {
+        
+        return view('inicio/Inicio');
+    }
+
+
+    public function archivos()
+    {
+        return view('inicio/archivos/archivos');
+    }
 }

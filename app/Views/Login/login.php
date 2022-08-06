@@ -1,17 +1,7 @@
 
 
 <?php
-/*if(!isset($_SESSION["type_user"])){
-  echo 'console.log("no existe");';
-  echo 'hola';
-  header('Location: '.$nuevaURL.php);
-}else{
-  echo 'console.log("existe");';
-  echo 'hola';
-}*/
-
 if(isset($_SESSION["type_user"])){
-  
   if($_SESSION["type_user"] == 1){
     header('Location: '.base_url('Admin'));
     exit();
