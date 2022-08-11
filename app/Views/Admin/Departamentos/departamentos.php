@@ -27,7 +27,7 @@
                                     <th>ID</th>
                                     <th>Nombre departamento</th>
                                     <th>Descripcion</th>
-                                    <th>Activo</th>
+                                    <!-- <th>Activo</th> -->
                                 </tr>
 
                                 <?php

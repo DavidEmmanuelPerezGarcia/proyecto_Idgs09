@@ -49,7 +49,7 @@
                                                             </div>
                                                             <div class="form-group review-pro-edt mg-b-0-pt">
                                                                 <button type="submit"
-                                                                    class="btn btn-ctl-bt waves-effect waves-light">Submit
+                                                                    class="btn btn-ctl-bt waves-effect waves-light">Guardar
                                                                 </button>
                                                             </div>
                                                         </div>

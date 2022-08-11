@@ -71,7 +71,7 @@ class AdminController extends BaseController
     }
 
     public function upload(){
-        $validationRule = [
+        /*$validationRule = [
             'userfile' => [
                 'label' => 'Image File',
                 'rules' => 'uploaded[userfile]'
@@ -96,8 +96,34 @@ class AdminController extends BaseController
             $addArchivo = $this->loginModel->insertGeneral("archivos", $data);
 
             return redirect()->to(base_url('Admin'));
-        }
+        }*/
 
+
+        $validationRule = [
+            'userfile' => [
+                'label' => 'Image File',
+                'rules' => 'uploaded[userfile]'
+                    . '|is_image[userfile]'
+                    . '|mime_in[userfile,image/jpg,image/jpeg,image/gif,image/png,image/webp]'
+                    . '|max_size[userfile,100]'
+                    . '|max_dims[userfile,1024,768]',
+            ],
+        ];
+
+        $img = $this->request->getFile('archivo');
+
+        $nameImg = $img->getRandomName();
+        $img->move(ROOTPATH.'public/archivos/',$nameImg);
+
+        // return view('upload_form', $data);
+
+        $data = [
+            'nombre' => $_POST["nombre_archivo"],
+            'id_user' => $_SESSION["id"],
+            'ruta_archivo' => $nameImg
+        ];
+        $addArchivo = $this->loginModel->insertGeneral("archivos", $data);
+        return redirect()->to(base_url('Admin'));
 
     }
 

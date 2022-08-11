@@ -37,7 +37,7 @@
                                                 <td>'.$a["nombre"].'</td>
                                                 <td>'.$a["usuario"].'</td>
                                                 <td>'.$a["date"].'</td>
-                                                <td><button class="btn btn-primary">Descargar</button></td>
+                                                <td><a href="'.base_url('public')."/archivos/".$a["ruta_archivo"].'" class="btn btn-primary" download>Descargar</a></td>
                                             </tr>';
                                 }
                                 ?>
