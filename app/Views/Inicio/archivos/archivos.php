@@ -1,108 +1,60 @@
 <?php echo view('inicio/Header/header')?>
 
 <!-- Content page-->
-<section class="full-box dashboard-contentPage">
-	<!-- NavBar -->
-	
-	<!-- Content page -->
-	<div class="container-fluid">
-		<div class="page-header">
-			<h1 class="text-titles">Archivos</h1>
-		</div>
-		<ul class="nav nav-tabs" style="margin-bottom: 15px;">
-			<li class="active"><a href="#" id="btn-agregar" data-toggle="tab" aria-expanded="true">Listado<div
-						class="ripple-container">
-					</div></a></li>
+<body>
+        <br>
+        <div class="section-admin container-fluid">
+            <div class="row admin text-center">
+                <h1 style="color:#fff">Listado de Archivos</h1>
+            </div>
+        </div>
+        <br>
+		<div class="product-status mg-b-30">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="product-status-wrap">
+                            <h4>Archivos</h4>
+							<Form autocomplete="off" class="form-inline" id="formarchivo" method="post">
+								<Center>
+									<h4>Nombre del archivo</h4>
+									<div class="input grup">
+										
+										<input type="text" name="nombre" placehoder="nombre del documento" class="form-control" required="required">
 
-			<li class=""><a href="#" id="btn-listado" data-toggle="tab" aria-expanded="false">Agregar archivos<div
-						class="ripple-container"></div>
-				</a></li>
-		</ul>
-		<section id="listado">
-			<div class="table-responsive">
-				<table class="table table-hover text-center">
-					<thead>
-						<tr>
-							<th class="text-center">#</th>
-							<th class="text-center">Nombres</th>
-							<th class="text-center">Apellidos</th>
-							<th class="text-center">Nacionalidad</th>
+									</div>
+									<button class="btn btn-light btn-sm" id="upfile"><i class="fa fa-upload" id="icon.btn-file" aria-hidden="true"></i></button>
+									<input type="file" name"archivo" id="getfile" class="hidden" required="required">
+									<input type="submit" form="formarchivos" id="setarchivo" class="btn btn-success btn-sm" value="agregar">
+								</Center>
+							</Form>
+								
 							
-						</tr>
-					</thead>
-					<tbody>
-						<?php
-						if(!isset($jugadores)){
-							echo '<tr><td colspan="6">No existen equipos</td></tr>';
-						}else{
-							foreach($jugadores as $j){
-								echo 	'<tr>
-											<td>'.$j["id"].'</td>
-											<td>'.$j["nombres"].'</td>
-											<td>'.$j["apellidos"].'</td>
-											<td>'.$j["nacionalidad"].'</td>
-											
-											
-										</tr>';
-							}
-						}
-						?>
-					</tbody>
-				</table>
-				<!-- <ul class="pagination pagination-sm">
-					<li class="disabled"><a href="#!">«</a></li>
-					<li class="active"><a href="#!">1</a></li>
-					<li><a href="#!">2</a></li>
-					<li><a href="#!">3</a></li>
-					<li><a href="#!">4</a></li>
-					<li><a href="#!">5</a></li>
-					<li><a href="#!">»</a></li>
-				</ul> -->
-			</div>
-		</section>
+								
+							
+                            <div class="add-product" hidden>
+                                <a href="#"></a>
+                            </div>
+                            <table>
+                                <tbody><tr>
+                                    <th>ID</th>
+                                    <th>Descripcion del archivo</th>
+                                    <th>Apelliddos</th>
+                                    
 
-		<section id="agregar_jugadores" hidden>
-			<div class="row">
-				<div class="col-xs-12 col-md-10 col-md-offset-1">
-					<form action="<?= base_url("agregar_jugadores");?>" method="POST">
-						<h3 align="center">Datos del jugador</h3>
-						<div class="form-group label-floating is-empty">
-							<label class="control-label">Nombres del jugador</label>
-							<input class="form-control" type="text" name="nombres_jugadores">
-						</div>
-						<div class="form-group label-floating is-empty">
-							<label class="control-label">Apellidos del jugador</label>
-							<input class="form-control" type="text" name="apellido_jugador">
-						</div>
-						<div class="form-group label-floating is-empty">
-							<label class="control-label">Nacionalidad</label>
-							<input class="form-control" type="text" name="nacionalidad_jugador">
-						</div>
-						<p class="text-center">
-							<button href="#!" class="btn btn-info btn-raised btn-sm"><i class="zmdi zmdi-floppy"></i>
-								Save</button>
-						</p>
-					</form>
-				</div>
-			</div>
-		</section>
-
-	</div>
+                                </tr>
 
 
+                            </tbody></table>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>		
 
-
-</section>
-    <?php echo view('inicio/Footer/footer')?>
-    <script>
-	$("#btn-listado").click(function () {
-		$("#listado").hide();
-		$("#agregar_jugadores").show();
-	})
-
-	$("#btn-agregar").click(function () {
-		$("#listado").show();
-		$("#agregar_jugadores").hide();
-	})
-
-</script>
+    
+<script link=""></script>
+<?php echo view('inicio/Footer/footer')?>
+    
