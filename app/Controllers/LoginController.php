@@ -152,4 +152,12 @@ class LoginController extends BaseController
 
         }
     }
+
+    public function cerrar_session(){
+        echo 'cerrar_session';
+        $this->session = session();
+        $this->session->destroy();
+
+        return redirect()->to(base_url(''));
+    }
 }

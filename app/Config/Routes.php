@@ -40,6 +40,7 @@ $routes->get('/', 'LoginController::login');
 /* Routes Login*/
 $routes->get('/generar_url','LoginController::generar_url');
 $routes->get('/google_login','LoginController::google_login');
+$routes->get('cerrar_session','LoginController::cerrar_session');
 
 /* Routes Admin*/
 $routes->get('Admin','AdminController::index');
@@ -48,10 +49,12 @@ $routes->get('departamentos','AdminController::vistaDepartamentosAdmin');
 $routes->get('Agregar_departamento','AdminController::vistaAddDepartamentos');
 $routes->get('usuarios','AdminController::LiestadoUsuarios');
 $routes->post('agregar_departamento','AdminController::agregar_departamento');
+$routes->post('agregar_archivo','AdminController::upload');
 
 /* Routes usuario comun*/
 $routes->get('inicio','AdminController::inicio');
 $routes->get('/archivos','AdminController::archivos');
+
 
 
 /*

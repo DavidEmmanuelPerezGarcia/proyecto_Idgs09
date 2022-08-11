@@ -55,6 +55,13 @@ class LoginModel extends Model{
         $qry->insert($data);
         return "datos agregados";
     }
+
+    public function getAllRow($tabla,$condicion){
+        $qry = $this->db->table($tabla);
+        $qry->select("*");
+        $qry->where($condicion);
+        return $qry->get()->getRowArray();
+    }
 }
 
 

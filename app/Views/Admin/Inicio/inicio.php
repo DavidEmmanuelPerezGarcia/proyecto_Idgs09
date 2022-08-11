@@ -22,32 +22,28 @@
                                 <a href="<?php echo base_url('Agregar_Archivos');?>">Agregar Archivos</a>
                             </div>
                             <table>
-                                <tbody><tr>
-                                    <th>Image</th>
-                                    <th>Product Title</th>
-                                    <th>Status</th>
-                                    <th>Purchases</th>
-                                    <th>Product sales</th>
-                                    <th>Stock</th>
-                                    <th>Price</th>
-                                    <th>Setting</th>
-                                </tr>
-                                <tr>
-                                    <td><img src="img/new-product/5-small.jpg" alt=""></td>
-                                    <td>Product Title 1</td>
-                                    <td>
-                                        <button class="pd-setting">Active</button>
-                                    </td>
-                                    <td>50</td>
-                                    <td>$750</td>
-                                    <td>Out Of Stock</td>
-                                    <td>$15</td>
-                                    <td>
-                                        <button data-toggle="tooltip" title="" class="pd-setting-ed" data-original-title="Edit"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-                                        <button data-toggle="tooltip" title="" class="pd-setting-ed" data-original-title="Trash"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-                                    </td>
+                                <tbody>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Propietario</th>
+                                        <th>Fecha</th>
+                                        <th>Descargar archivo</th>
+                                    </tr>
+                                <?php
+                                foreach($archivos as $a){
+                                    echo   '<tr>
+                                                <td>'.$a["id"].'</td>
+                                                <td>'.$a["nombre"].'</td>
+                                                <td>'.$a["usuario"].'</td>
+                                                <td>'.$a["date"].'</td>
+                                                <td><button class="btn btn-primary">Descargar</button></td>
+                                            </tr>';
+                                }
+                                ?>
 
-                            </tbody></table>
+                                </tbody>
+                            </table>
                             <!-- <div class="custom-pagination">
 								<ul class="pagination">
 									<li class="page-item"><a class="page-link" href="#">Previous</a></li>
