@@ -6,7 +6,7 @@
         <br>
         <div class="section-admin container-fluid">
             <div class="row admin text-center">
-                <h1 style="color:#fff">Listado de archivos</h1>
+                <h1 style="color:#fff">Agregar archivos</h1>
             </div>
         </div>
         <br>
@@ -34,14 +34,14 @@
 
                                                             <div class="input-group mg-b-15 mg-t-15">
                                                                 <span class="input-group-addon"><i class="icon nalika-user" aria-hidden="true"></i></span>
-                                                                <input type="text" class="form-control" name="nombre_archivo" required="" placeholder="Nombre del departamento">
+                                                                <input type="text" class="form-control" name="nombre_archivo" required="" placeholder="Nombre del archivo">
                                                             </div>
                                                             <div class="input-group mg-b-15">
                                                                 <span class="input-group-addon"><i class="icon nalika-user" aria-hidden="true"></i></span>
                                                                 <input type="file" class="form-control" required="" name="archivo" placeholder="Descripcion">
                                                             </div>
                                                             <div class="form-group review-pro-edt mg-b-0-pt">
-                                                                <button type="submit" class="btn btn-ctl-bt waves-effect waves-light">Submit
+                                                                <button type="submit" class="btn btn-ctl-bt waves-effect waves-light">Guardar
                                                                 </button>
                                                             </div>
                                                         </div>
