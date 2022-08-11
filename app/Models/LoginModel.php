@@ -17,9 +17,8 @@ class LoginModel extends Model{
     }
 
     //metodo para actualizar el ususario
-    public function actualizarUsuarioGoogle($datos, $id){
-        $builder = $this->db->table('users')->where('oauth_id',$id)->update($datos);
-
+    public function actualizarUsuarioGoogle($id,$datos){
+        $builder = $this->db->table('users')->where('id',$id)->update($datos);
         if($this->db->affectedRows() == 1){
             return true;
         }else{
@@ -27,6 +26,8 @@ class LoginModel extends Model{
         }
     } 
 
+   
+        
     //MEtodo para verificar si el usuario ya existe
     public function usuarioGoogleExiste($id){
         $builder = $this->db->table('users')->where('oauth_id', $id);

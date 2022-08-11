@@ -80,15 +80,6 @@ if(isset($_SESSION["type_user"])){
   <div class="color-line"></div>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        <div class="back-link back-backend">
-          <a href="index.html" class="btn btn-primary">Back to Dashboard</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container-fluid">
-    <div class="row">
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
       <div class="col-md-4 col-md-4 col-sm-4 col-xs-12">
         <div class="text-center m-b-md custom-login">
@@ -97,7 +88,7 @@ if(isset($_SESSION["type_user"])){
         </div>
         <div class="hpanel">
           <div class="panel-body">
-            <form action="#" id="loginForm">
+            <form action="<?php echo base_url("login_google") ?>" id="loginForm" method="POST">
               <div class="form-group">
                 <label class="control-label" for="username">Username</label>
                 <input type="text" placeholder="example@gmail.com" title="Please enter you username" required=""
@@ -116,8 +107,7 @@ if(isset($_SESSION["type_user"])){
 
 
 
-              <button class="btn btn-success btn-block loginbtn">Login</button>
-              <a class="btn btn-default btn-block" href="#">Register</a>
+              <button class="btn btn-success btn-block loginbtn" onclick="verificar_login">Login</button>
             </form>
             <br>
             <button class="btn btn-danger btn-block" onclick="google_login();">Conectarse por <b>Google</b></button>
@@ -221,6 +211,7 @@ if(isset($_SESSION["type_user"])){
         }, 1000);
     }
   </script>
+
 </body>
 
 </html>

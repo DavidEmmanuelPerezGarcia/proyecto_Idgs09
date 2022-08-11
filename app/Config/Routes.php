@@ -50,6 +50,9 @@ $routes->get('Agregar_departamento','AdminController::vistaAddDepartamentos');
 $routes->get('usuarios','AdminController::LiestadoUsuarios');
 $routes->post('agregar_departamento','AdminController::agregar_departamento');
 $routes->post('agregar_archivo','AdminController::upload');
+$routes->get('cambiar_contraseña','AdminController::cambiar_contraseña');
+$routes->post('cambiar_contraseña','AdminController::update_contraseña');
+$routes->post('login_google','LoginController::login_google');
 
 /* Routes usuario comun*/
 $routes->get('inicio','AdminController::inicio');

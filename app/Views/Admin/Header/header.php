@@ -21,7 +21,8 @@ if(!isset($_SESSION["type_user"]) || $_SESSION["type_user"] != 1){
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
   <!-- Bootstrap CSS
 		============================================ -->
-  <link rel="stylesheet" href="<?php echo base_url();?>/public/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="<?php #echo base_url();?>/public/css/bootstrap.min.css"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   <!-- Bootstrap CSS
 		============================================ -->
   <link rel="stylesheet" href="<?php echo base_url();?>/public/css/font-awesome.min.css">
@@ -103,8 +104,12 @@ if(!isset($_SESSION["type_user"]) || $_SESSION["type_user"] != 1){
                 <a class="" href="<?php echo base_url('usuarios');?>" aria-expanded="false"><i class="icon nalika-mail icon-wrap"></i> <span
                     class="mini-click-non">Usuarios</span></a>
               </li>
-
-
+              
+              <li>
+                <a class="" href="<?php echo base_url('cambiar_contraseña');?>" aria-expanded="false"><i class="icon nalika-mail icon-wrap"></i> <span
+                    class="mini-click-non">Cambiar Contraseña</span>
+                  </a>
+              </li>
             </ul>
           </nav>
         </div>

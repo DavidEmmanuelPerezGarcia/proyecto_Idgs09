@@ -153,6 +153,31 @@ class LoginController extends BaseController
         }
     }
 
+    // PARA INICIAR SESSION NORMAL
+    public function login_google(){
+        $data = [
+            'email' => $_POST["username"],
+            'password' => $_POST["password"]
+        ];
+
+        $user = $this->loginModel->getAllRow("users",$data);
+
+        if(empty($user)){
+            echo 'no existe';
+        }else{
+
+            // $array= [
+            //     'nombre' => $user["nombre"]
+            // ];
+            $session = session();
+            $session->set($user);
+            // echo $_SESSION["type_user"];
+            // echo print_r($user);
+        }
+        return redirect()->to(base_url());
+    }
+
+
     public function cerrar_session(){
         echo 'cerrar_session';
         $this->session = session();

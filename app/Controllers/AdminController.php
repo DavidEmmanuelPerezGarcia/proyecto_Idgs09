@@ -101,6 +101,26 @@ class AdminController extends BaseController
 
     }
 
+    // CAMBIAMOS LA CONTRASEÑA
+     public function update_contraseña(){
+        
+         $condicion=[
+             "id"=>$_SESSION["id"]
+         ];
+         $datos=[
+             "password"=>$_POST["password"],
+            ];
+
+        // echo '<pre>';
+        // echo print_r($condicion);
+        // echo '</pre>';
+            
+            $update_contraseña = $this->loginModel->actualizarUsuarioGoogle($condicion,$datos);
+        return redirect()->to(base_url('cambiar_contraseña'));
+
+
+    }
+
     public function inicio()
     {
         
@@ -111,5 +131,9 @@ class AdminController extends BaseController
     public function archivos()
     {
         return view('inicio/archivos/archivos');
+    }
+
+    public function cambiar_contraseña(){
+        return view('Admin/contraseña/inicio');
     }
 }
