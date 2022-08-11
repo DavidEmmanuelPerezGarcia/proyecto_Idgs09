@@ -141,11 +141,11 @@ class AdminController extends BaseController
         // echo print_r($condicion);
         // echo '</pre>';
             
-            $update_contraseña = $this->loginModel->actualizarUsuarioGoogle($condicion,$datos);
+        $update_contraseña = $this->loginModel->update_password($condicion,$datos);
         return redirect()->to(base_url('cambiar_contraseña'));
 
 
-    }
+        }
 
     public function inicio()
     {

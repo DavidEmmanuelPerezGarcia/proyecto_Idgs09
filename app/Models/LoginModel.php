@@ -17,7 +17,7 @@ class LoginModel extends Model{
     }
 
     //metodo para actualizar el ususario
-    public function actualizarUsuarioGoogle($id,$datos){
+    public function actualizarUsuarioGoogle($datos,$id){
         $builder = $this->db->table('users')->where('id',$id)->update($datos);
         if($this->db->affectedRows() == 1){
             return true;
@@ -62,6 +62,19 @@ class LoginModel extends Model{
         $qry->select("*");
         $qry->where($condicion);
         return $qry->get()->getRowArray();
+    }
+
+    // ACTUALIZAR PASSWORD 
+
+    public function update_password($id,$datos){
+        $builder = $this->db->table('users')->where('id',$id)->update($datos);
+        if($this->db->affectedRows() == 1){
+            return true;
+        }else{
+            return false;
+        }
+     
+
     }
 }
 
