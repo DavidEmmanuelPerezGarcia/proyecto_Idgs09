@@ -233,4 +233,25 @@ class LoginController extends BaseController
         return redirect()->to(base_url('Inicio'));
 
     }
+
+    public function cambiar_contraseña_comun(){
+        return view('Inicio/contraseña_comun/inicio');
+
+        // echo "Codeingenter no es mi pasion";
+    }
+
+    // CAMBIAR CONTRASEÑA DE USUARIO COMUN
+
+    public function update_contraseña_comun(){
+
+        $condicion=[
+            "id"=>$_SESSION["id"]
+        ];
+        $datos=[
+            "password"=>$_POST["password"],
+           ];
+           
+           $update_contraseña = $this->loginModel->update_password($condicion,$datos);
+           return redirect()->to(base_url('Inicio'));
+    }
 }

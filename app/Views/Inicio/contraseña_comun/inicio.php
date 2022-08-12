@@ -1,5 +1,5 @@
     <!--  links -->
-    <?php echo view("Admin/Header/header");?>
+    <?php echo view("Inicio/Header/header");?>
     <!-- /links -->
 
     <body>
@@ -27,10 +27,10 @@
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <div class="">
-                                                    <form action="cambiar_contraseña" method="POST">
+                                                    <form action="cambiar-pass" method="POST">
                                                         <div class="card-block">
                                                             <div class="text-muted f-w-400">
-                                                                <p>Ingrese nueva contraseña</p>
+                                                                <p>Agregar nueva contraseña</p>
                                                             </div>
 
                                                             <div class="input-group mg-b-15 mg-t-15">

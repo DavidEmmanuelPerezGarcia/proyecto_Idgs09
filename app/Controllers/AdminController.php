@@ -127,7 +127,7 @@ class AdminController extends BaseController
 
     }
 
-    // CAMBIAMOS LA CONTRASEÑA
+    // CAMBIAMOS LA CONTRASEÑA DE ADMIN
      public function update_contraseña(){
         
          $condicion=[

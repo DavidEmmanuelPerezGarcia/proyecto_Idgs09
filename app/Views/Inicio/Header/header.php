@@ -94,9 +94,9 @@ if(!isset($_SESSION["type_user"]) || $_SESSION["type_user"] != 0){
               <li>
                 <!-- <a class="" href="#" aria-expanded="false"><i class="icon nalika-mail icon-wrap"></i> <span
                     class="mini-click-non">Inicio</span></a> -->
-                    <a class "" href="<?php echo base_url('/Inicio') ?>"><i class="icon nalika-mail icon-wrap"></i> <span
+                    <a class"" href="<?php echo base_url('/Inicio') ?>"><i class="icon nalika-mail icon-wrap"></i> <span
                     class="mini-click-non">Inicio</span></a>
-                    <a class "" href=""><i class="icon nalika-mail icon-wrap"></i> <span
+                    <a class"" href="<?php echo base_url('/cambiar-pass')?>"><i class="icon nalika-mail icon-wrap"></i> <span
                     class="mini-click-non">Cambiar contraseña</span></a>
               </li>
 

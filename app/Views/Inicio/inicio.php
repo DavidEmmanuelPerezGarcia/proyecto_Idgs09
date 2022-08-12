@@ -1,5 +1,5 @@
-    <!--  links -->
-    <?php echo view("inicio/Header/header");?>
+     links
+    <!-- <?php //echo view("inicio/Header/header");?> -->
     <!-- /links -->
 
     <body>

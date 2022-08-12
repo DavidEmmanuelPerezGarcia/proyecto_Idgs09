@@ -58,6 +58,8 @@ $routes->post('login_google','LoginController::login_google');
 /* Routes usuario comun*/
 $routes->get('Inicio','LoginController::inicio');
 $routes->get('/archivos','AdminController::archivos');
+$routes->get('/cambiar-pass','LoginController::cambiar_contraseña_comun');
+$routes->post('cambiar-pass','LoginController::update_contraseña_comun');
 
 
 
