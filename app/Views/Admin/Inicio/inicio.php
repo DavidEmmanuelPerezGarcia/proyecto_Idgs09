@@ -18,9 +18,27 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="product-status-wrap">
                             <h4>Archivos</h4>
-                            <div class="add-product">
+                            <form autocomplete="off" class="form-inline" id="formarchivo" method="post">
+								<center>
+									<h4>Nombre del archivo</h4>
+									<div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-file" aria-hidden="true"></i>
+                                            
+                                        </span>
+										
+										<input type="text" name="nombre" placehoder="nombre del documento" class="form-control">
+
+									</div>
+									<button class="btn btn-light btn-sm" id="upFile"><i class="fa fa-upload" id="ico-btn-file" aria-hidden="true"></i></button>
+									<input type="file" name="archivo" id="getFile" class="hidden" required="required">
+									<input type="submit" form="formarchivos" id="setarchivo" class="btn btn-success btn-sm" value="agregar">
+								</center>
+							</form>
+                            
+                            <!-- <div class="add-product">
                                 <a href="<?php echo base_url('Agregar_Archivos');?>">Agregar Archivos</a>
-                            </div>
+                            </div> -->
                             <table>
                                 <tbody>
                                     <tr>

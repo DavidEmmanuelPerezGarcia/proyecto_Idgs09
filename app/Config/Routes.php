@@ -41,6 +41,7 @@ $routes->get('/', 'LoginController::login');
 $routes->get('/generar_url','LoginController::generar_url');
 $routes->get('/google_login','LoginController::google_login');
 $routes->get('cerrar_session','LoginController::cerrar_session');
+$routes->post('agregar_archivo_comun','LoginController::upload_comun');
 
 /* Routes Admin*/
 $routes->get('Admin','AdminController::index');

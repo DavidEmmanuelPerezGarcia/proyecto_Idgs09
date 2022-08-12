@@ -15,7 +15,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="product-status-wrap">
                             <h4>Archivos</h4>
-							<form autocomplete="off" class="form-inline" id="formarchivo" method="post">
+							<form autocomplete="off" enctype="multipart/form-data" action="<?php echo base_url('agregar_archivo_comun');?>" class="form-inline" id="formarchivo" method="post">
 								<Center>
 									<h4>Nombre del archivo</h4>
 									<div class="input-group">
@@ -24,12 +24,13 @@
                                             
                                         </span>
 										
-										<input type="text" name="nombre" placehoder="nombre del documento" class="form-control" >
+										<input type="text" name="nombre_archivo" placehoder="nombre del documento" class="form-control" >
 
 									</div>
 									<button class="btn btn-light btn-sm" id="upFile"><i class="fa fa-upload" id="ico-btn-file" aria-hidden="true"></i></button>
 									<input type="file" name="archivo" id="getFile" class="hidden" required="required">
-									<input type="submit" form="formarchivos" id="setarchivo" class="btn btn-success btn-sm" value="agregar">
+									<!-- <input type="submit" form="formarchivos" id="setarchivo" class="btn btn-success btn-sm" value="agregar"> -->
+                                    <button types="submit" class="btn btn-success btn-sm">Agregar</button>
 								</Center>
 							</form>
 								
@@ -40,16 +41,28 @@
                                 <a href="#"></a>
                             </div>
                             <table>
-                                <tbody><tr>
-                                    <th>ID</th>
-                                    <th>Descripcion del archivo</th>
-                                    <th>Apelliddos</th>
-                                    
+                                <tbody>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Propietario</th>
+                                        <th>Fecha</th>
+                                        <th>Descargar archivo</th>
+                                    </tr>
+                                <?php
+                                foreach($archivos as $a){
+                                    echo   '<tr>
+                                                <td>'.$a["id"].'</td>
+                                                <td>'.$a["nombre"].'</td>
+                                                <td>'.$a["usuario"].'</td>
+                                                <td>'.$a["date"].'</td>
+                                                <td><a href="'.base_url('public')."/archivos/".$a["ruta_archivo"].'" class="btn btn-primary" download>Descargar</a></td>
+                                            </tr>';
+                                }
+                                ?>
 
-                                </tr>
-
-
-                            </tbody></table>
+                                </tbody>
+                            </table>
                            
                         </div>
                     </div>
