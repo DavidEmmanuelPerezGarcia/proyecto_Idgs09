@@ -55,7 +55,7 @@ $routes->post('cambiar_contraseña','AdminController::update_contraseña');
 $routes->post('login_google','LoginController::login_google');
 
 /* Routes usuario comun*/
-$routes->get('inicio','AdminController::inicio');
+$routes->get('Inicio','LoginController::inicio');
 $routes->get('/archivos','AdminController::archivos');
 
 

@@ -147,11 +147,6 @@ class AdminController extends BaseController
 
         }
 
-    public function inicio()
-    {
-        
-        return view('inicio/Inicio');
-    }
 
 
     public function archivos()

@@ -185,4 +185,10 @@ class LoginController extends BaseController
 
         return redirect()->to(base_url(''));
     }
+
+    public function inicio()
+    {
+        
+        return view('Inicio/archivos/archivos');
+    }
 }

@@ -12,7 +12,8 @@
     </div>
     <!-- jquery
 		============================================ -->
-        <script src="<?php echo base_url();?>/public/js/vendor/jquery-1.12.4.min.js"></script>
+        <!-- <script src="<?php #echo base_url();?>/public/js/vendor/jquery-1.12.4.min.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- bootstrap JS
 		============================================ -->
     <script src="<?php echo base_url();?>/public/js/bootstrap.min.js"></script>
@@ -63,3 +64,6 @@
     <!-- main JS
 		============================================ -->
     <script src="<?php echo base_url();?>/public/js/main.js"></script><a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: none;"><i class="fa fa-angle-up"></i></a>
+    <!-- plugins JS
+		============================================ -->
+    <script src="<?php echo base_url();?>/public/js/archivos.js" type="text/javascript"></script>

@@ -1,3 +1,9 @@
+<?php
+if(!isset($_SESSION["type_user"]) || $_SESSION["type_user"] != 0){
+  header('Location: '.base_url(''));
+  exit();
+}
+?>
 <!doctype html>
 <html class="no-js" lang="en">
 

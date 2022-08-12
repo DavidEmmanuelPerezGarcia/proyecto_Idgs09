@@ -1,5 +1,5 @@
 $(document).ready(function (){
-    $("upfile").on("click",function(){
+    $("#upFile").on("click",function(){
         $("#getFile").click();
         return false;
 

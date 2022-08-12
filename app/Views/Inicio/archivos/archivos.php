@@ -15,19 +15,23 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="product-status-wrap">
                             <h4>Archivos</h4>
-							<Form autocomplete="off" class="form-inline" id="formarchivo" method="post">
+							<form autocomplete="off" class="form-inline" id="formarchivo" method="post">
 								<Center>
 									<h4>Nombre del archivo</h4>
-									<div class="input grup">
+									<div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-file" aria-hidden="true"></i>
+                                            
+                                        </span>
 										
-										<input type="text" name="nombre" placehoder="nombre del documento" class="form-control" required="required">
+										<input type="text" name="nombre" placehoder="nombre del documento" class="form-control" >
 
 									</div>
-									<button class="btn btn-light btn-sm" id="upfile"><i class="fa fa-upload" id="icon.btn-file" aria-hidden="true"></i></button>
-									<input type="file" name"archivo" id="getfile" class="hidden" required="required">
+									<button class="btn btn-light btn-sm" id="upFile"><i class="fa fa-upload" id="ico-btn-file" aria-hidden="true"></i></button>
+									<input type="file" name="archivo" id="getFile" class="hidden" required="required">
 									<input type="submit" form="formarchivos" id="setarchivo" class="btn btn-success btn-sm" value="agregar">
 								</Center>
-							</Form>
+							</form>
 								
 							
 								
